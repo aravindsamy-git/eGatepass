@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>eGatepass Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Thu, 01 Jan 1970 00:00:00 GMT">
+
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="css/index.css?v=1">
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Logo">
+        <h1 class="header-text">CARE eGatepass</h1>
+    </header>
+
+    <div class="container">
+        <p class="welcome-text">Hello!</p>
+        <p class="auth-text">Welcome to CARE eGatepass</p>
+        <br>
+        <p class="welcome-text">Please Login!</p>
+        <br>
+        <p class="auth-text">Authentication</p>
+        <br>
+        <br>
+        <div class="input">
+            <input type="text" id="login_id" name="login_id" class="input__field" required>
+            <label for="login_id" class="input__label">Login Id</label>
+        </div>
+        <br>
+
+        <div class="input">
+            <input type="password" id="password" name="password" class="input__field" required>
+            <label for="password" class="input__label">Password</label>
+        </div>
+        <br>
+
+        <select id="role" name="role" class="role-field" required>
+            <option value="" disabled selected>Choose Role</option>
+            <option value="student">Student</option>
+            <option value="admin">Admin</option>
+        </select><br>
+
+        <a class="btn outlined" onclick="loginFunction()">Login</a>
+        <div class="result" id="result"></div>
+    </div>
+
+    <footer>
+        <p>CARE Group of Institutions|All Rights Reserved|Copyright 2023</p>
+    </footer>
+
+    <script src="js/loginfunctionn.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="pragma" content="no-cache" />
+    <link rel="stylesheet" href="../css/studentdashboard.css">
+</head>
+<body onload="setMinDate()">
+<header>
+    <img src="../img/logo.png" alt="Logo">
+    <h1 class="header-text">CARE eGatepass</h1>
+</header>
+
+<div class="gg-log-out" onclick="logout()"></div>
+
+<div id="hiMessage"></div>
+
+<div class="student-container">
+    <p class="cheader"> Student Details</p>
+    <p id="rollno"><strong>Roll No: </strong></p>
+    <p id="name"><strong>Name: </strong></p>
+    <p id="batch"><strong>Batch: </strong></p>
+    <p id="dept"><strong>Department: </strong></p>
+    <p id="h_d"><strong>Hostel/Day Scholar: </strong></p>
+    <p id="g"><strong>Gender: </strong></p>
+    <p id="phone_no"><strong>Contact No: </strong></p>
+    <p id="in"><strong>Incharge: </strong></p>
+
+    <button onclick="redirectToHistory()">View History</button>
+</div>
+
+<div class="input-container">
+    <p class="cheader"> Apply Gatepass</p>
+    <label for="proposed_out_date">Proposed out date:</label>
+    <input type="date" id="proposed_out_date" name="proposed_out_date" required min="<?= date('Y-m-d') ?>">
+    <br>
+    <br>
+    <label for="proposed_out_time">Proposed out time:</label>
+    <input type="time" id="proposed_out_time" name="proposed_out_time" required min = "10:30">
+    <br>
+    <br>
+    <label for="proposed_in_date">Proposed in date:</label>
+    <input type="date" id="proposed_in_date" name="proposed_in_date" required min="<?= date('Y-m-d') ?>">
+    <br>
+    <br>
+    <label for="proposed_in_time">Proposed in time:</label>
+    <input type="time" id="proposed_in_time" name="proposed_in_time" required>
+    <br>
+    <br>
+    <label for="purpose">Purpose:</label>
+    <select id="purpose" name="purpose" placeholder="Select Options" required>
+        <option value="" disabled selected>Choose Option</option>
+        <option value="medical_leave">Medical Emergency</option>
+        <option value="holidays">On-Duty/Competitions</option>
+        <option value="holidays">Semester Holidays</option>
+        <option value="holidays">Outing</option>
+        <option value="others">Others</option>
+    </select>
+    <br>
+    <br>
+    <button type="button" onclick="submitEgatepass()">Submit</button>
+    <br>
+</div>
+
+<footer>
+    <p>CARE Group of Institutions | All Rights Reserved | Copyright 2023</p>
+</footer>
+
+<div id="loader-container">
+    <div id="loader"></div>
+</div>
+
+<div id="customAlertBox" class="custom-alert-box">
+    <div class="custom-alert-content">
+        <span id="customAlertMessage"></span>
+        <button onclick="closeCustomAlert()">OK</button>
+    </div>
+</div>
+<script>
+
+    function redirectToHistory() {
+        window.location.href = "../html/historys.html";
+    }
+        
+    function logout() {
+         sessionStorage.removeItem('studentData');
+        window.location.href = "../index.html";
+    }
+
+    function setMinDate() {
+        const today = new Date().toISOString().split('T')[0];
+        const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        document.getElementById('proposed_out_date').min = today;
+        document.getElementById('proposed_in_date').min = today;
+        document.getElementById('proposed_out_time').min = currentTime;
+    }
+    
+</script>
+<script src="../js/fetchdisplay.js"></script>
+<script src="../js/getqueryparam.js"></script>
+<script src="../js/submitegatepass.js"></script>
+</body>
+</html>

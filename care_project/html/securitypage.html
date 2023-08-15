@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gate Security</title>
+    <meta http-equiv="pragma" content="no-cache" />
+    <link rel="stylesheet" href="../css/securitypage.css">
+</head>
+<body>
+    <header>
+        <img src="../img/logo.png" alt="Logo">
+        <h1 class="header-text">CARE eGatepass</h1>
+    </header>
+
+    <div class="container">
+        <h1>Gate Security</h1>
+        <input type="text" id="egatepass_id" class="input-field" placeholder="Enter eGatepass ID">
+        <div class="buttons">
+            <button class="button button-in" onclick="action('in')">In</button>
+            <button class="button button-out" onclick="action('out')">Out</button>
+        </div>
+        <div class="status-box" id="statusMessage"></div>
+    </div>
+
+    <footer>
+        <p>CARE Group of Institutions | All Rights Reserved | Copyright 2023</p>
+    </footer>
+
+    <script src="../js/security.js"></script>
+</body>
+</html>

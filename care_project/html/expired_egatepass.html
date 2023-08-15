@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expired eGatepass</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="pragma" content="no-cache" />
+    <link rel="stylesheet" href="../css/preloader.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+    <header>
+        <img src="../img/logo.png" alt="Logo">
+        <h1 class="header-text">CARE eGatepass</h1>
+    </header>
+
+    <h2>Expired eGatepass</h2>
+
+    
+    <div class="gg-log-out" onclick="logout()"></div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Ticket ID</th>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Batch</th>
+                    <th>Dept</th>
+                    <th>H/D</th>
+                    <th>Contact No</th>
+                    <th>Proposed out date</th>
+                    <th>Proposed out time</th>
+                    <th>Proposed in date</th>
+                    <th>Proposed in time</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <br>
+    <br>
+    <footer>
+        <p>CARE Group of Institutions | All Rights Reserved | Copyright 2023</p>
+    </footer>
+
+    <div id="loader-container">
+        <div id="loader"></div>
+    </div>
+
+    <script>
+        function logout() {
+            window.location.href = "../index.html";
+        }
+    </script>
+
+    <script src="../js/expired_pass.js"></script>
+</body>
+</html>

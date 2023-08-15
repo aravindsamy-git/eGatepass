@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/preloader.css">
+    <link rel="stylesheet" href="../css/studentdashboard.css">
+</head>
+<body onload="setMinDate()">
+<header>
+    <img src="../img/logo.png" alt="Logo">
+    <h1 class="header-text">CARE eGatepass</h1>
+</header>
+
+<div class="gg-log-out" onclick="logout()"></div>
+
+<div id="hiMessage"></div>
+
+<div class="studentheader">
+    <p>Student Details</p>
+</div>
+
+<div class="passheader">
+    <p>Apply eGatepass</p>
+</div>
+
+<div class="main-container">
+    <div class="student-container">
+        <p id="rollno"><strong>Roll No: </strong></p>
+        <p id="name"><strong>Name: </strong></p>
+        <p id="batch"><strong>Batch: </strong></p>
+        <p id="dept"><strong>Department: </strong></p>
+        <p id="h_d"><strong>Hostel/Day Scholar: </strong></p>
+        <p id="g"><strong>Gender: </strong></p>
+        <p id="phone_no"><strong>Contact No: </strong></p>
+        <p id="in"><strong>Incharge: </strong></p>
+    
+        <button class="view-history-btn" onclick="redirectToHistory()">View eGatepass History</button>
+    </div>
+    
+    <div class="input-container">
+        <label for="proposed_out_date">Proposed out date:</label>
+        <input type="date" id="proposed_out_date" name="proposed_out_date" required min="<?= date('Y-m-d') ?>">
+        <br>
+        <br>
+        <!-- Other input fields here -->
+        <br>
+        <br>
+        <button type="button" onclick="submitEgatepass()">Submit</button>
+        <br>
+    </div>
+</div>
+
+<footer>
+    <p>CARE Group of Institutions | All Rights Reserved | Copyright 2023</p>
+</footer>
+
+<div id="loader-container">
+    <div id="loader"></div>
+</div>
+
+<div id="customAlertBox" class="custom-alert-box">
+    <div class="custom-alert-content">
+        <span id="customAlertMessage"></span>
+        <button onclick="closeCustomAlert()">OK</button>
+    </div>
+</div>
+<script>
+    // Your JavaScript code here
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Approval</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="pragma" content="no-cache" />
+    <link rel="stylesheet" href="../css/preloader.css">
+    <link rel="stylesheet" href="../css/pending.css">
+</head>
+<body>
+    <header>
+        <img src="../img/logo.png" alt="Logo">
+        <h1 class="header-text">CARE eGatepass</h1>
+    </header>
+
+    <div id="hiMessage"></div>
+
+    <div class="gg-log-out" onclick="logout()"></div>
+
+    <div class="container">
+        <h2>eGatepass Approval</h2>
+        <p><span>Ticket ID:</span> <span id="ticketId"></span></p>
+        <p><span>Roll No:</span> <span id="rollno"></span></p>
+        <p><span>Name:</span> <span id="name"></span></p>
+        <p><span>Batch:</span> <span id="batch"></span></p>
+        <p><span>Department:</span> <span id="dept"></span></p>
+        <p><span>H/D:</span> <span id="h_d"></span></p>
+        <p><span>Phone No:</span> <span id="phone_no"></span></p>
+        <p><span>Proposed Out Date:</span> <span id="proposed_out_date"></span></p>
+        <p><span>Proposed Out Time:</span> <span id="proposed_out_time"></span></p>
+        <p><span>Proposed In Date:</span> <span id="proposed_in_date"></span></p>
+        <p><span>Proposed In Time:</span> <span id="proposed_in_time"></span></p>
+        <p><span>Purpose:</span> <span id="purpose"></span></p>
+        <p><span>Status:</span> <span id="status"></span></p>
+        <div class="pending-message">
+            <p>Dear User,</p>
+            <p>Your eGatepass is under veriification</p>
+            <p>Please wait for approval</p>
+        </div>
+    </div>
+    <footer>
+        <p>CARE Group of Institutions | All Rights Reserved | Copyright 2023</p>
+    </footer>
+
+    <div id="loader-container">
+        <div id="loader"></div>
+    </div>
+
+    
+    <script src="../js/pendingview.js"></script>
+
+    <script>
+        function logout() {
+            sessionStorage.removeItem('studentData');
+           window.location.href = "../index.html";
+       }
+    </script>
+</body>
+</html>

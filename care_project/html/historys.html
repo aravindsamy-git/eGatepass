@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>eGatepass History</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="pragma" content="no-cache" />
+    <link rel="stylesheet" href="../css/preloader.css">
+    <link rel="stylesheet" href="../css/history.css">
+</head>
+<body>
+    <header>
+        <img src="../img/logo.png" alt="Logo">
+        <h1 class="header-text">CARE eGatepass</h1>
+    </header>
+    <h2>eGatepass History</h2>
+
+    <div class="gg-log-out" onclick="logout()"></div>
+
+    <div id="hiMessage"></div>
+
+    <div class="table-container">
+
+        <table border="1">
+            <tr>
+                <th>Ticket ID</th>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Batch</th>
+                <th>Dept</th>
+                <th>H/D</th>
+                <th>Contact No</th>
+                <th>Proposal Out Date</th>
+                <th>Proposal Out Time</th>
+                <th>Proposed In Date</th>
+                <th>Proposed In Time</th>
+                <th>Purpose</th>
+                <th>Status</th>
+                <th>Option</th>
+            </tr>
+            <tbody id="historyTableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>CARE Group of Institutions | All Rights Reserved | Copyright 2023</p>
+    </footer>
+
+    <div id="loader-container">
+        <div id="loader"></div>
+    </div>
+
+    <script src="../js/historydata.js"></script>
+
+    <script>
+        function logout() {
+            sessionStorage.removeItem('studentData');
+           window.location.href = "../index.html";
+       }
+    </script>
+</body>
+</html>
