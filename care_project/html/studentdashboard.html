@@ -3,7 +3,7 @@
 <head>
     <title>Student Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="pragma" content="no-cache" />
+    <link rel="stylesheet" href="../css/preloader.css">
     <link rel="stylesheet" href="../css/studentdashboard.css">
 </head>
 <body onload="setMinDate()">
@@ -16,8 +16,15 @@
 
 <div id="hiMessage"></div>
 
+<div class="studentheader">
+    <p>Student Details</p>
+</div>
+
+<div class="passheader">
+    <p>Apply eGatepass</p>
+</div>
+
 <div class="student-container">
-    <p class="cheader"> Student Details</p>
     <p id="rollno"><strong>Roll No: </strong></p>
     <p id="name"><strong>Name: </strong></p>
     <p id="batch"><strong>Batch: </strong></p>
@@ -27,11 +34,10 @@
     <p id="phone_no"><strong>Contact No: </strong></p>
     <p id="in"><strong>Incharge: </strong></p>
 
-    <button onclick="redirectToHistory()">View History</button>
+    <button class="view-history-btn" onclick="redirectToHistory()">View eGatepass History</button>
 </div>
 
 <div class="input-container">
-    <p class="cheader"> Apply Gatepass</p>
     <label for="proposed_out_date">Proposed out date:</label>
     <input type="date" id="proposed_out_date" name="proposed_out_date" required min="<?= date('Y-m-d') ?>">
     <br>
